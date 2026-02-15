@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste déroulante</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        select, button {
+            padding: 10px;
+            margin-top: 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Choisissez une couleur</h2>
+        
+        <select id="couleur">
+            <option value="bleu">Bleu</option>
+            <option value="blanc">Blanc</option>
+            <option value="rouge">Rouge</option>
+        </select>
+        
+        <br>
+        
+        <button onclick="validerChoix()">Valider</button>
+    </div>
+
+    <script>
+        function validerChoix() {
+            const choix = document.getElementById("couleur").value;
+            alert("Vous avez choisi : " + choix);
+        }
+    </script>
+
+</body>
+</html>
